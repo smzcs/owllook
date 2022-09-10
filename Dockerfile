@@ -5,4 +5,5 @@ RUN echo "${TIME_ZONE}" > /etc/timezone \
     && ln -sf /usr/share/zoneinfo/${TIME_ZONE} /etc/localtime
 WORKDIR /owllook
 ADD . /owllook
-RUN pip install --no-cache-dir pipenv && pipenv install --skip-lock && find . -name "*.pyc" -delete
+RUN pipenv lock && pipenv --clear && pipenv --rm
+RUN pip install --no-cache-dir --system --deploy pipenv && pipenv install --skip-lock && find . -name "*.pyc" -delete
