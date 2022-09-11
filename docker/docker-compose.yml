@@ -4,9 +4,13 @@ services:
     image: c-owllook
     container_name: c-owllook-web
     ports:
-     - "9010:8001"
+     - 9010:8001
     environment:
       TZ: Asia/Shanghai
+      REDIS_ENDPOINT: redis
+      MONGO_HOST: mongo
+      MONGO_USERNAME: ''
+      MONGO_PASSWORD: ''
     depends_on:
       redis:
         condition: service_healthy
@@ -41,6 +45,8 @@ services:
       interval: 1s
       timeout: 3s
       retries: 30
+    ports:
+     - 6379:6379
     environment:
       TZ: Asia/Shanghai
     volumes:
