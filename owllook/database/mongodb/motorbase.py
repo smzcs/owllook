@@ -16,6 +16,7 @@ class MotorBase:
     """
     _db = {}
     _collection = {}
+    print(CONFIG)
     MONGODB = CONFIG.MONGODB
 
     def __init__(self, loop=None):
