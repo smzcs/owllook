@@ -33,7 +33,7 @@ services:
       - /dokcer/owllook/mongodb/data/log:/var/log/mongodb
       - ./config/mongod.conf:/etc/mongo/mongod.conf
   redis:
-    image: redis:7.0.4
+    image: redis:6.0
     restart: always
     container_name: c-owllook-redis
     privileged: true
