@@ -11,6 +11,7 @@ services:
       MONGO_HOST: mongo
       MONGO_USERNAME: ''
       MONGO_PASSWORD: ''
+      MODE: DEV
     depends_on:
       redis:
         condition: service_healthy
