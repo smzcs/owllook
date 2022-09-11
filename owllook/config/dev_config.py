@@ -22,7 +22,7 @@ class DevConfig(Config):
         POOLSIZE=10,
     )
     MONGODB = dict(
-        MONGO_HOST=os.getenv('MONGO_HOST', ""),
+        MONGO_HOST=os.getenv('MONGO_HOST', "mongo"),
         MONGO_PORT=int(os.getenv('MONGO_PORT', 27017)),
         MONGO_USERNAME=os.getenv('MONGO_USERNAME', ""),
         MONGO_PASSWORD=os.getenv('MONGO_PASSWORD', ""),
