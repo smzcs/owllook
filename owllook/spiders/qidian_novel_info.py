@@ -6,7 +6,7 @@ import time
 from ruia import Spider, Item, TextField, AttrField
 from ruia_ua import middleware
 
-os.environ['MODE'] = 'PRO'
+#os.environ['MODE'] = 'PRO'
 
 from owllook.database.mongodb import MotorBaseOld
 

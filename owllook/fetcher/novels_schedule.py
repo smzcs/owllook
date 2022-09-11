@@ -10,7 +10,7 @@ import sys
 import time
 import uvloop
 
-os.environ['MODE'] = 'PRO'
+#os.environ['MODE'] = 'PRO'
 sys.path.append('../../')
 
 from owllook.fetcher.cache import update_all_books

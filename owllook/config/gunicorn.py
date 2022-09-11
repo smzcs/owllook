@@ -2,7 +2,7 @@
 # gunicorn -c config/gunicorn.py --worker-class sanic.worker.GunicornWorker server:app
 import os
 
-os.environ['MODE'] = 'PRO'
+#os.environ['MODE'] = 'PRO'
 
 WORKERS = os.getenv('WORKERS', 2)
 TIMEOUT = os.getenv('TIMEOUT', 60)

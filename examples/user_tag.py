@@ -4,7 +4,7 @@ import os
 import pymongo
 import uvloop
 
-os.environ['MODE'] = 'PRO'
+#os.environ['MODE'] = 'PRO'
 
 from pprint import pprint
 from urllib.parse import parse_qs, urlparse

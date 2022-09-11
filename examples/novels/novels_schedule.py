@@ -3,7 +3,7 @@ import asyncio
 import os
 import uvloop
 
-os.environ['MODE'] = 'PRO'
+#os.environ['MODE'] = 'PRO'
 from owllook.fetcher.cache import update_all_books
 
 
