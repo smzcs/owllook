@@ -13,7 +13,7 @@ from owllook.database.mongodb import MotorBase
 from owllook.fetcher.function import get_time
 
 # mongo
-MONGODB_SERVER = "localhost"
+MONGODB_SERVER = "mongo"
 MONGODB_PORT = 27017
 MONGODB_USERNAME = ""
 MONGODB_PASSWORD = ""
@@ -27,7 +27,7 @@ class Novels(object):
             account='{username}:{password}@'.format(
                 username=MONGODB_USERNAME,
                 password=MONGODB_PASSWORD) if MONGODB_USERNAME else '',
-            host='localhost',
+            host=MONGODB_SERVER,
             port=27017,
             database=MONGODB_DB)
         connection = pymongo.MongoClient(_mongo_uri)

@@ -29,7 +29,7 @@ def init_cache(app, loop):
     REDIS_DICT = CONFIG.REDIS_DICT
     aiocache.settings.set_defaults(
         class_="aiocache.RedisCache",
-        endpoint=REDIS_DICT.get('REDIS_ENDPOINT', 'localhost'),
+        endpoint=REDIS_DICT.get('REDIS_ENDPOINT', 'redis'),
         port=REDIS_DICT.get('REDIS_PORT', 6379),
         db=REDIS_DICT.get('CACHE_DB', 0),
         password=REDIS_DICT.get('REDIS_PASSWORD', None),
