@@ -1,4 +1,4 @@
 FROM python:3.6
 WORKDIR /owllook
 COPY . /owllook/
-RUN pip install --no-cache-dir pipenv && pipenv install --system --deploy && find . -name "*.pyc" -delete
+RUN pip install --no-cache-dir pipenv && pipenv install && find . -name "*.pyc" -delete
