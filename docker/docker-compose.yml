@@ -14,7 +14,7 @@ services:
         condition: service_healthy
       mongo:
         condition: service_healthy
-    command: ["pipenv", "run", "gunicorn", "-c", "/owllook/config/gunicorn.py", "--worker-class", "sanic.worker.GunicornWorker", "owllook.server:app"]
+    command: pipenv run gunicorn -c /owllook/config/gunicorn.py --worker-class sanic.worker.GunicornWorker owllook.server:app
   mongo:
     image: mongo:3.6
     container_name: c-owllook-mongo
