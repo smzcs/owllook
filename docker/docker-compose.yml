@@ -5,8 +5,6 @@ services:
     container_name: c-owllook-web
     ports:
      - "9010:8001"
-    volumes:
-     - /dokcer/owllook/web:/owllook
     environment:
       TZ: Asia/Shanghai
     depends_on:
